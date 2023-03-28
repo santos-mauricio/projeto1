@@ -9,7 +9,13 @@ import javax.persistence.GenerationType;
 @Table(name="TB_USER")
 @Entity
 public class User {
-	
+
+	public User() {}
+	public User(Long id, String name, String email) {
+		this.setId(id);
+		this.setName(name);
+		this.setEmail(email);
+	}
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long Id;
